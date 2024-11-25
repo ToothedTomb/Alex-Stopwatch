@@ -7,3 +7,5 @@ This is a simple stopwatch application developed with C++ and GTK.
 # Compile: 
 $ g++ main.cpp -o stopwatch `pkg-config --cflags --libs gtk4`
 
+# Download:
+https://jonathan-linux.itch.io/alex-stopwatch
