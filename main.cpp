@@ -70,7 +70,7 @@ static void on_reset_button_clicked(GtkButton *button, gpointer user_data) {
 static void activate(GtkApplication *app, gpointer user_data) {
     GtkWidget *window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "Alex - Stopwatch");
-    gtk_window_set_default_size(GTK_WINDOW(window), 400, 320);
+    gtk_window_set_default_size(GTK_WINDOW(window), 430, 320);
     gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
 
     GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 10);
@@ -104,11 +104,12 @@ static void activate(GtkApplication *app, gpointer user_data) {
     // CSS Styling
     GtkCssProvider *css_provider = gtk_css_provider_new();
     gtk_css_provider_load_from_string(css_provider,
-        "window { background-color: #f4f4f4; } "
-        ".title-label { font-size: 50px; color:black; font-weight: bold; margin-bottom: 30px; text-decoration: underline; } "
-        ".time-label { font-size: 40px; font-weight: bold; } "
-        ".button { font-size: 30px; padding: 10px 20px;}"
-        ".button:hover {color:blue;}"
+        "window { background: linear-gradient(to left, #A9D6FF, #69C0FF); }"
+        ".title-label { font-size: 60px; color:black; font-weight: bold; margin-bottom: 10px; text-decoration: underline; } "
+        ".time-label { font-size: 60px; font-weight: bold; color: #333333;} "
+        ".button { font-size: 30px; padding: 10px 20px; border: 4px solid black;background: #69C0FF; color:black}"
+        ".button:hover { background: #4da6e0; }" // color:blue; Its very odd you need to do background: color to change the color
+                                                // The background-color will NOT work or at least for version gtk4.0. 
        );
 
     GtkStyleContext *style_context = gtk_widget_get_style_context(GTK_WIDGET(window));
