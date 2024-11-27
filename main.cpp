@@ -64,7 +64,7 @@ static void on_reset_button_clicked(GtkButton *button, gpointer user_data) {
 
 static void activate(GtkApplication *app, gpointer user_data) {
     GtkWidget *window = gtk_application_window_new(app);
-    gtk_window_set_title(GTK_WINDOW(window), "Alex - Stopwatch");
+    gtk_window_set_title(GTK_WINDOW(window), "Alex 2.0 - Stopwatch Application");
     gtk_window_set_default_size(GTK_WINDOW(window), 430, 320);
     gtk_window_set_resizable(GTK_WINDOW(window), FALSE);
     // Set Window Icon
