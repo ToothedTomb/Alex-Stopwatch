@@ -11,7 +11,7 @@ Russian:
 ![Screenshot From 2024-12-09 15-52-49](https://github.com/user-attachments/assets/2d1a62f8-c39c-4913-adb5-c1a00c15086b)
 
 # Compile: 
-$ g++ main.cpp -o stopwatch `pkg-config --cflags --libs gtk4`
+g++ main.cpp -o stopwatch `pkg-config --cflags --libs gtk4`
 
 # Download:
 https://jonathan-linux.itch.io/alex-stopwatch
